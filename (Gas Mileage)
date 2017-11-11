@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int milesDriven;
+	int gallonsUsed;
+	int milesTotal = 0;
+	int gallonsTotal = 0;
+	cout << "Enter miles driven (-1 to quit): ";
+	cin >> milesDriven;
+	while (milesDriven != -1)
+	{
+		cout << "Enter gallons used: ";
+		cin >> gallonsUsed;
+		milesTotal += milesDriven;
+		gallonsTotal += gallonsUsed;
+		cout << "MPG this trip: " << static_cast<double>(milesDriven) / gallonsUsed << endl;
+		cout << "Total MPG: " << static_cast<double>(milesTotal) / gallonsTotal << endl << endl;
+		cout << "Enter miles driven (-1 to quit): ";
+		cin >> milesDriven;
+	}	
+}
